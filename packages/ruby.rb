@@ -51,17 +51,18 @@ Rove.package :ruby do
           end
         end
       end
-    end
-  end
-  
-        option :rbenv_220 do
+
+      option :rbenv_220 do
         title '2.2.0'
 
         config do |config|
           inject_rbenv_ruby(config, '2.2.0p0')
         end
-      end
-
+      end  
+      
+    end
+  end
+  
   def inject_rbenv_ruby(config, ruby)
     config[:rbenv][:user_installs][0][:rubies] += [ruby]
     {}
